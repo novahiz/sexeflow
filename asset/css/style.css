@@ -1,0 +1,158 @@
+
+/*===========================CSS VARRIABLES=============================*/
+:root {
+    --first-color: rgb(180, 37, 134);
+    --desaturate-first-color: rgba(255, 0, 174, 0.2);
+    --desaturate-first-color-2: rgba(247, 157, 219, 0.4);
+    --second-color: rgb(92, 5, 173);
+    --third-color: rgb(28, 27, 27);
+    --color-white: #e2e2e2;
+    --desaturate-white: hsla(0, 0%, 100%, 0.19);
+
+    --text-color: #333;
+
+    --btn-border-radius: 5px;
+    --btn-box-shadow: 0 3px 5px rgba(23, 23, 23, 0.3);
+
+    --main-transition: .3s ease-in-out;
+}
+
+
+/*===========================Reset Style=============================*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    padding: none;
+}
+
+button {
+    border-radius: none;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+
+/*===========================Re-useable CSS=============================*/
+
+.container {
+    margin-inline: auto;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*===========================Header=============================*/
+
+.header {
+    width: 100%;
+    background-color: var(--third-color);
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.307);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/*===========================Burger=============================*/
+
+.burger {
+    margin: 1rem;
+}
+
+.burger .line {
+    width: 25px;
+    height: 3px;
+    background-color: var(--first-color);
+}
+
+.burger #line1 {
+    transform: translateY(-4px);
+}
+
+.burger #line3 {
+    transform: translateY(4px);
+}
+
+/*=====search bar========*/
+
+.form-container {
+    display: flex;
+    align-items: center;
+}
+
+.header .search-bar {
+    padding: .5rem;
+    border: none;
+    border-radius: var(--btn-border-radius);
+    background-color: var(--desaturate-white);
+}
+
+.header .search-bar::placeholder {
+    color: var(--color-white);
+}
+
+.header .form-container button{
+
+
+    color: var(--first-color);
+    padding: .5rem;
+}
+
+/*=====login========*/
+
+.loggin {
+    display: flex;
+}
+
+.sign-in,
+.sign-up {
+    display: block;
+    color: var(--color-white);
+    margin: 10px;
+    padding: .5rem;
+    border-radius: var(--btn-border-radius);
+    background-color: var(--first-color);
+    text-transform: capitalize;
+    transition: var(--main-transition);
+}
+
+.sign-up {
+    border: 1px solid transparent;
+}
+
+.sign-in {
+    border: 1px solid var(--first-color);
+    background-color: transparent;
+}
+
+.sign-in:hover {
+    background-color: var(--first-color);
+}
+
+.sign-up:hover {
+    border: 1px solid var(--first-color);
+    background-color: var(--desaturate-first-color);
+}
+
